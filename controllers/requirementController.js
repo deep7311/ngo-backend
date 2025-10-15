@@ -26,6 +26,7 @@ export const getAllRequirements = async (req, res) => {
 export const applyRequirement = async (req, res) => {
   const { id } = req.params;
   const { message } = req.body;
+  console.log(message);
   try {
     const requirement = await Requirement.findById(id);
     requirement.applicants.push({
