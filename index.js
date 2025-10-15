@@ -12,7 +12,7 @@ connectDB();
 
 const app = express();
 app.use(cors({
-    origin: ["http://localhost:5173", "https://ngo-backend-pb36lh6rx-deepaks-projects-0f83f580.vercel.app/"],
+    origin: ["http://localhost:5173"],
     credentials: true
 }));
 app.use(express.json());
