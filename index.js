@@ -11,7 +11,10 @@ dotenv.config();
 connectDB();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: ["http://localhost:5173", "https://ngo-backend-pb36lh6rx-deepaks-projects-0f83f580.vercel.app/"],
+    credentials: true
+}));
 app.use(express.json());
 
 app.get("/", (req, res) => res.send("Hello World!"));
